@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="student-dashboard">
+    <h1>📚 My Library Books</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Book Name</th>
+          <th>Book ID</th>
+          <th>Issue Date</th>
+          <th>Due Date</th>
+          <th>Fine (₹)</th>
+         
+         
+        </tr>
+      </thead>
+      <tbody id="bookTable"></tbody>
+    </table>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <script type="module" src="student-dashboard.js"></script>
+</body>
+</html>

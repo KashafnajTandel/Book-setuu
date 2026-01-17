@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Librarian Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="librarian-dashboard">
+    <h1>📚 Librarian Dashboard</h1>
+
+    <div class="form-card">
+      <h2>Issue / Return Book</h2>
+
+      <input type="text" id="studentName" placeholder="Student Name">
+      <input type="text" id="enrollmentNo" placeholder="Enrollment Number">
+      <input type="email" id="studentEmail" placeholder="Student Email">
+      <input type="text" id="bookName" placeholder="Book Name">
+      <input type="text" id="bookId" placeholder="Book ID">
+
+      <div class="action-buttons">
+        <button id="issueBtn">Issue Book</button>
+        <button id="returnBtn" class="return-btn">Return Book</button>
+      </div>
+    </div>
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+    <button id="returnBtn">Return Book</button>
+
+  </div>
+
+  <script type="module" src="librarian-dashboard.js"></script>
+</body>
+
+
+</html>
