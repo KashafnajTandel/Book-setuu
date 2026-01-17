@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -16,17 +16,17 @@
       <p class="hint">Click anywhere to continue</p>
     </div>
   </div>
+
   <!-- Your frontend JS -->
   <script src="script.js"></script>
 
   <!-- Firebase v12 Modular SDK -->
   <script type="module">
-    // Import Firebase functions
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
     import { getAuth } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
     import { getFirestore } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
-    // Your web app's Firebase configuration
+    // Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyCUK4He3wdG1WFeu6KqIZiPbTQCnCljXnU",
       authDomain: "book-setuu.firebaseapp.com",
@@ -38,8 +38,8 @@
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);       // For Authentication
-    const db = getFirestore(app);    // For Firestore Database
+    const auth = getAuth(app);
+    const db = getFirestore(app);
 
     console.log("Firebase Initialized ✅", app, auth, db);
   </script>
