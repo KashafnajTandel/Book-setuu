@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ================= RESET ================= */
+*/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/* ================= BACKGROUND ================= */
+body {
+  min-height: 100vh;
+  background: url('bgimage/bgimage.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.947);
+  z-index: 0;
+  pointer-events: none; /* 🔥 FIX */
+}
+input, button {
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= GLOBAL CENTER ================= */
+.center {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= HOME / LANDING PAGE ================= */
+.home {
+  cursor: pointer;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  animation: fadeUp 1.2s ease;
+}
+
+.home-content h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.home-content h2 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.project-name {
+  font-size: 18px;
+  color: #c7d2fe;
+  margin-bottom: 30px;
+}
+
+.hint {
+  font-size: 14px;
+  opacity: 0.7;
+  letter-spacing: 1px;
+}
+
+/* ================= LOGIN / SIGNUP CARD ================= */
+.card {
+  width: 380px;
+  padding: 34px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  animation: fadeUp 0.9s ease;
+}
+
+.card h1,
+.card h2 {
+  color: #fb8632;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 18px;
+}
+
+/* ================= INPUT ================= */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+}
+
+input:focus {
+  outline: none;
+  border-color: #fb8632;
+  box-shadow: 0 0 0 3px rgba(251, 134, 50, 0.25);
+}
+
+/* ================= BUTTON ================= */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #fb8632, #ff6a00);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .card {
+    width: 92%;
+  }
+}
+/* ===== STUDENT DASHBOARD ===== */
+
+.student-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+/* Table styling */
+.student-dashboard table {
+  width: 85%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.student-dashboard th {
+  background: #fb8632;
+  color: white;
+}
+
+.student-dashboard th,
+.student-dashboard td {
+  padding: 12px;
+  text-align: center;
+  color: #1e293b; /* dark text inside table */
+}
+
+/* Logout button */
+.logout-btn {
+  width: 220px;
+  margin-top: 10px;
+}
+/* ===== LIBRARIAN DASHBOARD ===== */
+
+.librarian-dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  z-index: 2;
+  position: relative;
+  color: white;
+}
+
+.form-card {
+  width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-card h2 {
+  text-align: center;
+  color: #fb8632;
+}
+
+.form-card input {
+  border-radius: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.return-btn {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.logout-btn {
+  width: 220px;
+}
+body::after {
+  display: none;
+}
+
